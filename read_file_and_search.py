@@ -1,7 +1,6 @@
-# Обработка файла и поиск данных в нем
-from os import read
+# Обработка файла и поиск данных
 
-f = open('names.txt', 'r')
+f = open('resources/names.db', 'r')
 names = []
 names.append(f.read().split("\n"))
 # print(names[0][4])
