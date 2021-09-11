@@ -1,14 +1,11 @@
 # Обработка файла и поиск данных в нем
 from os import read
 
-nn = 123
-
 f = open('names.txt', 'r')
 names = []
 names.append(f.read().split("\n"))
 # print(names[0][4])
 find = 'Ruby'
-
 
 def foundMatch(search, lists):
     for item in lists:
@@ -19,5 +16,5 @@ def foundMatch(search, lists):
             if item == search or part_of[0] == search or part_of[1] == search:
                 print(f'We have match {item}')
 
-
 foundMatch(find, names[0])
+
