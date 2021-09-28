@@ -74,16 +74,54 @@ print(b)
 print('_______________end------------')
 # ВСЕ Я СПАТЬ (28.09.2021  0:30)
 # 6. Нареж одну строку на две.
-# Покажи пример Slicins
+print('question6'.upper())
+x='hell worl!'
+print(x[:3])   #не до конца понял но вроде так
+print(x[-5:])
+print(x[0:4])
+# Покажи пример Slicins #показал вроде
+print('_______________end------------')
 # Раскоментируй код ниже, допиши его, проверь и закоментируй вновь.
-# text = 'Hello, Mark!'
-
+text = 'Hello, Mark!'  # переменная  text значит привет марк
+print(text)
+if 'Hello, Mark!' in text:     # если Саша говорит привет марк ,тогда марк говорит привет Саша
+    print('hello to you, Sasha!!')
 # 7. Сделай в строке все буквы заглавными.
-# Upper Case,
+print('question7'.upper())
+# Upper Case
+a = 'hello'
+print(a.upper())
 # Lower Case
-
+b = 'Sasha!'
+print(b.lower())
+c = a + ' ' + b
+print(c.title())
+print('_______________end------------')
 # 8. Раздели строку на две и помести в Lists.
+print('question8'.upper())
+text = 'Hello Sasha!'
+a = text[0:4]
+b = text[5:]
+thislist = [a,b]
+print(thislist)
 # Split String
-
-
-
+# 9. Собери строку в одну. Покажи пример
+# Конкатенация
+print('question9'.upper())
+a = 'Мое имя'
+b = 'Маpk'
+c = a+' '+b
+print(c)
+print('_______________end------------')
+# 10. Формат что строки это и как работает?
+print('question10'.upper())
+# это тип данных строки его можно менять и если ты сам не назначиш формат он выставиться автоматичеки
+# Строка формата
+# Покажи пример
+a = 1
+a =1.0
+a ='one'
+a = ['o','n','e']
+#name = 'Марк'
+#профессия = 'студент'
+#mySpec = "Привет, меня зовут {}, меня зовут {}"
