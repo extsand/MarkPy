@@ -30,6 +30,8 @@ def addToList(job):
     myList.append(data)
 
 def headUI(flag):
+    if flag == 'logo':
+        print('------------------To-Do Console App----------------------------')
     if flag == 'header':
         print('===============================================================')
         print('Job name                              | Status')
@@ -48,7 +50,10 @@ def showAllJobs(list):
         index += 1
 
 def removeJob(index):
+    job = "job"
+    print(f"You're remove: {myList[index][job]}")
     myList.pop(index)
+
 
 def changeJobStatus(index):
     flag = "flag"
@@ -96,7 +101,7 @@ def app():
         key = input(f'Enter your key: ')
         controlKey(key)
 
-
+headUI('logo')
 app()
 
 
