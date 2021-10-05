@@ -1,4 +1,4 @@
-# print(f'Hello, add your daily plan: ')
+#To-do console app
 
 id = 0
 myList = []
