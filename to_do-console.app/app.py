@@ -7,7 +7,7 @@ job_1 = {
     "job": "Read book",
     "flag": "Not performed"
 }
-job_2= {
+job_2 = {
     "job": "Play on game",
     "flag": "Not performed"
 }
@@ -29,13 +29,17 @@ def addToList(job):
     }
     myList.append(data)
 
-def headUI():
-    print('===============================================================')
-    print('Job name                              | Status')
-    print('---------------------------------------------------------------')
+def headUI(flag):
+    if flag == 'header':
+        print('===============================================================')
+        print('Job name                              | Status')
+        print('---------------------------------------------------------------')
+
+    if flag == 'line':
+        print('---------------------------------------------------------------')
 
 def showAllJobs(list):
-    headUI()
+    headUI('header')
     job = "job"
     flag = "flag"
     index = 0
@@ -49,9 +53,9 @@ def removeJob(index):
 def changeJobStatus(index):
     flag = "flag"
     job = "job"
-    headUI()
+    headUI('header')
     print(f" {myList[index][job]}   | {myList[index][flag]}")
-    print('-------------------------------------------------')
+    headUI('line')
     status = input(f"Enter status: \n"
                    f"1 - Done \n"
                    f"2 - Not performed")
@@ -59,7 +63,7 @@ def changeJobStatus(index):
         myList[index][flag] = "Done"
     if status == '2':
         myList[index][flag] = "Not performed"
-    headUI()
+    headUI('header')
     print(f" {myList[index][job]}   | {myList[index][flag]}")
 
 def controlKey(key):
@@ -73,12 +77,12 @@ def controlKey(key):
     if key == "3":
         showAllJobs(myList)
     if key == "4":
-        number = input('Change job status \n Enter job number')
+        number = input('Change job status \n Enter job number: ')
         changeJobStatus(int(number))
 
 
 def uiRender():
-    print('----------------------------')
+    headUI('line')
     print(f'Key 1 - add new job \n'
           f'Key 2 - remove job \n'
           f'Key 3 - show all jobs \n'
